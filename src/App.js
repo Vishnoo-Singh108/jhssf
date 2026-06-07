@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import logo from "./logo.png";
+
 // Storage polyfill for running locally
 if (!window.storage) {
   const _store = {};
@@ -38,7 +38,7 @@ export default function SchoolWebsite() {
   });
   const [savingNotif, setSavingNotif] = useState(false);
   const [savingGal, setSavingGal] = useState(false);
-  const [deletingId, setDeletingId] = useState(null); // ✅ NEW
+  const [deletingId, setDeletingId] = useState(null);
   const [successMsg, setSuccessMsg] = useState("");
   const fileRef = useRef();
 
@@ -82,7 +82,7 @@ export default function SchoolWebsite() {
 
   async function addNotification() {
     if (!notifForm.title || !notifForm.date || !notifForm.content) return;
-    setSavingNotif(true); // ✅ UPDATED
+    setSavingNotif(true);
     try {
       await axios.post(`${process.env.REACT_APP_API_URL}/notifications`, {
         title: notifForm.title,
@@ -97,19 +97,19 @@ export default function SchoolWebsite() {
     } catch (err) {
       console.log(err);
     } finally {
-      setSavingNotif(false); // ✅ UPDATED
+      setSavingNotif(false);
     }
   }
 
   async function deleteNotification(id) {
-    setDeletingId(id); // ✅ UPDATED
+    setDeletingId(id);
     try {
       await axios.delete(`${process.env.REACT_APP_API_URL}/notifications/${id}`);
       loadData();
     } catch (err) {
       console.log(err);
     } finally {
-      setDeletingId(null); // ✅ UPDATED
+      setDeletingId(null);
     }
   }
 
@@ -142,14 +142,14 @@ export default function SchoolWebsite() {
   }
 
   async function deleteGalleryItem(id) {
-    setDeletingId(id); // ✅ UPDATED
+    setDeletingId(id);
     try {
       await axios.delete(`${process.env.REACT_APP_API_URL}/gallery/${id}`);
       loadData();
     } catch (err) {
       console.log(err);
     } finally {
-      setDeletingId(null); // ✅ UPDATED
+      setDeletingId(null);
     }
   }
 
@@ -219,7 +219,7 @@ export default function SchoolWebsite() {
       <header style={{ background: "linear-gradient(90deg,#0f2e24 0%,#1a4a3a 70%,#1f5a47 100%)", borderBottom: "4px solid #d4a017" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "16px 24px", display: "flex", alignItems: "center", gap: 20 }}>
           <div style={{ width: 64, height: 64, borderRadius: "50%", background: "#d4a017", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, overflow: "hidden" }}>
-            <img src={logo} style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+            <img src={logo} style={{ width: "100%", height: "100%", objectFit: "contain" }} alt="School Logo" />
           </div>
           <div style={{ flex: 1 }}>
             <div className="playfair" style={{ color: "#f5e6b8", fontSize: 22, fontWeight: 900, lineHeight: 1.2 }}>Janta Higher Secondary School</div>
@@ -297,14 +297,14 @@ export default function SchoolWebsite() {
           <div><strong>School Location:</strong>{" "}<a href="https://www.google.com/maps/place/Janta+Uchchatar+madhyamik+vidyalaya/@26.565006,83.9311746,18.24z/data=!4m6!3m5!1s0x3993c7a2dd5a6c95:0x9651955cb1da35c2!8m2!3d26.5655312!4d83.931302!16s%2Fg%2F11n0n3m92w?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer" style={{ color: "#d4a017", textDecoration: "none" }}>Open in Google Maps</a></div>
         </div>
         <div style={{ fontSize: 12, color: "#6a9a8a", marginTop: 16, borderTop: "1px solid #1a4a3a", paddingTop: 16 }}>© 2026 Janta Higher Secondary School, Mahuari Patherdewa. All Rights Reserved. || Designed & Developed by Vishnoo Singh</div>
-        
       </footer>
     </div>
   );
 }
 
 function FacultySection({ isAdmin }) {
-  const [facultyList, setFacultyList] = useState([
+  // ✅ FIX 1: removed unused `setFacultyList` setter
+  const [facultyList] = useState([
     { name: "Ashutosh Mani", role: "Principal", subject: "School Administration", qualification: " M.Sc Biology, B.Ed", experience: "25+ Years", contact: "7348465181", color: "#d4a017", image: "mani2.jpeg" },
     { name: "Ramdas Parnal", role: "Assistant Teacher", subject: "English", experience: "22+ Years", contact: "8423051231", color: "#3a2d5e", image: "RD.jpeg" },
     { name: "Ajay Bahadur Singh", role: "Assistant Teacher", subject: "Drawing , Sports & Physical Education", experience: "18+ Years", contact: "9839855862", color: "#1a3a4a", image: "ajay.png" },
@@ -320,12 +320,13 @@ function FacultySection({ isAdmin }) {
     const initials = faculty.name.split(" ").map(w => w[0]).join("").slice(0, 2).toUpperCase();
     return (
       <div style={{ width: size, height: size, borderRadius: "50%", flexShrink: 0, overflow: "hidden", border: border || `3px solid ${faculty.color}`, background: faculty.image ? "transparent" : faculty.color, display: "flex", alignItems: "center", justifyContent: "center", fontSize, fontWeight: 900, color: "#fff", fontFamily: "'Playfair Display', serif", boxShadow: "0 2px 12px rgba(0,0,0,0.18)" }}>
+        {/* ✅ FIX 2: removed duplicate alt prop */}
         {faculty.image ? <img src={faculty.image} alt={faculty.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} /> : initials}
       </div>
     );
   }
 
-  const fileRefs = useRef([]);
+  // ✅ FIX 3: removed unused `fileRefs`
   const principal = facultyList[0];
   const teachers = facultyList.slice(1);
 
@@ -357,6 +358,7 @@ function FacultySection({ isAdmin }) {
           <div key={i} className="faculty-card">
             <div style={{ height: 6, background: f.color }} />
             <div style={{ position: "relative", background: f.color + "22", height: 160, display: "flex", alignItems: "center", justifyContent: "center" }}>
+              {/* ✅ FIX 2: removed duplicate alt prop */}
               {f.image ? <img src={f.image} alt={f.name} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} /> : <Avatar faculty={f} size={90} fontSize={26} />}
             </div>
             <div style={{ padding: 20 }}>
@@ -471,18 +473,16 @@ function AboutSection() {
           </div>
           <div style={{ background: "#fff", padding: 32, borderRadius: 2, boxShadow: "0 2px 12px rgba(0,0,0,0.08)", borderLeft: "4px solid #d4a017" }}>
   <div className="playfair" style={{ fontSize: 22, fontWeight: 700, color: "#1a4a3a", marginBottom: 16 }}>Principal's Message</div>
-  
-  {/* ✅ NEW: Photo + quote side by side */}
   <div style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
     <img
   src="mani2.jpeg"
-  alt="Principal"
+  alt="Principal Ashutosh Mani"
   style={{
     width: 110,
-    height: 130,           // ✅ taller than wide = rectangle portrait
-    borderRadius: "8px",   // ✅ slight rounded corners, not circular
+    height: 130,
+    borderRadius: "8px",
     objectFit: "cover",
-    objectPosition: "center 30%",  // moves view down slightly
+    objectPosition: "center 30%",
     border: "3px solid #d4a017",
     flexShrink: 0,
     boxShadow: "0 2px 10px rgba(0,0,0,0.15)"
@@ -670,7 +670,6 @@ function ContactSection() {
   );
 }
 
-// ✅ UPDATED: added deletingId prop
 function AdminSection({ adminTab, setAdminTab, notifForm, setNotifForm, addNotification, savingNotif, notifications, deleteNotification, galForm, setGalForm, addGalleryItem, savingGal, gallery, deleteGalleryItem, fileRef, handleImageChange, deletingId }) {
   return (
     <div style={{ maxWidth: 1100, margin: "0 auto", padding: "60px 24px" }}>
@@ -712,12 +711,7 @@ function AdminSection({ adminTab, setAdminTab, notifForm, setNotifForm, addNotif
                           <div style={{ fontWeight: 700, fontSize: 14, marginTop: 6 }}>{n.title}</div>
                           <div style={{ fontSize: 11, color: "#888" }}>{n.date}</div>
                         </div>
-                        {/* ✅ UPDATED: shows Deleting... for the clicked item only */}
-                        <button
-                          className="btn btn-danger"
-                          onClick={() => deleteNotification(n._id)}
-                          disabled={deletingId === n._id}
-                        >
+                        <button className="btn btn-danger" onClick={() => deleteNotification(n._id)} disabled={deletingId === n._id}>
                           {deletingId === n._id ? "Deleting..." : "Delete"}
                         </button>
                       </div>
@@ -762,12 +756,7 @@ function AdminSection({ adminTab, setAdminTab, notifForm, setNotifForm, addNotif
                         <div style={{ fontSize: 11, color: "#888" }}>{g.date}</div>
                         <div style={{ fontSize: 12, color: "#666", marginTop: 2 }}>{(g.description || "").slice(0, 60)}{(g.description || "").length > 60 ? "..." : ""}</div>
                       </div>
-                      {/* ✅ UPDATED: shows Deleting... for the clicked item only */}
-                      <button
-                        className="btn btn-danger"
-                        onClick={() => deleteGalleryItem(g._id)}
-                        disabled={deletingId === g._id}
-                      >
+                      <button className="btn btn-danger" onClick={() => deleteGalleryItem(g._id)} disabled={deletingId === g._id}>
                         {deletingId === g._id ? "Deleting..." : "Delete"}
                       </button>
                     </div>
