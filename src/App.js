@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
-import logo from "./logo.png"; 
+
 // Storage polyfill for running locally
 if (!window.storage) {
   const _store = {};
