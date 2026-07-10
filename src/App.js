@@ -292,9 +292,9 @@ export default function SchoolWebsite() {
         <div className="playfair" style={{ color: "#d4a017", fontSize: 20, fontWeight: 700, marginBottom: 8 }}>Janta Higher Secondary School Mahuari, Patherdewa</div>
         <div style={{ fontSize: 13, marginBottom: 4 }}>Government School • Classes VI to X • Affiliated to State Education Board</div>
         <div style={{ fontSize: 12, color: "#6a9a8a", marginTop: 16, borderTop: "1px solid #1a4a3a", paddingTop: 16, lineHeight: 1.8 }}>
-          <div><strong>Principal:</strong> Ashutosh Mani <strong> || Contact:</strong>{" "}<a href="tel:7348465181" style={{ color: "#d4a017", textDecoration: "none" }}>7348465181</a></div>
-          <div><strong>Facebook:</strong>{" "}<a href="https://www.facebook.com/ashutosh.mani.39" target="_blank" rel="noreferrer" style={{ color: "#d4a017", textDecoration: "none" }}>Visit Facebook</a></div>
-          <div><strong>School Location:</strong>{" "}<a href="https://www.google.com/maps/place/Janta+Uchchatar+madhyamik+vidyalaya/@26.565006,83.9311746,18.24z/data=!4m6!3m5!1s0x3993c7a2dd5a6c95:0x9651955cb1da35c2!8m2!3d26.5655312!4d83.931302!16s%2Fg%2F11n0n3m92w?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer" style={{ color: "#d4a017", textDecoration: "none" }}>Open in Google Maps</a></div>
+          <div><strong>Principal:</strong> Ashutosh Mani <strong> || Contact:</strong>{" "}<a href="tel:9792465181" style={{ color: "#d4a017", textDecoration: "none" }}>9792465181</a></div>
+          <div><strong>Facebook:</strong>{" "}<a href="https://www.facebook.com/ashutosh.mani.39" target="_blank" rel="noreferrer" style={{ color: "#d4a017", textDecoration: "none" }}>🌐</a></div>
+          <div><strong>School Location:</strong>{" "}<a href="https://www.google.com/maps/place/Janta+Uchchatar+madhyamik+vidyalaya/@26.565006,83.9311746,18.24z/data=!4m6!3m5!1s0x3993c7a2dd5a6c95:0x9651955cb1da35c2!8m2!3d26.5655312!4d83.931302!16s%2Fg%2F11n0n3m92w?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer" style={{ color: "#d4a017", textDecoration: "none" }}>Open in Google Maps📍</a></div>
         </div>
         <div style={{ fontSize: 12, color: "#6a9a8a", marginTop: 16, borderTop: "1px solid #1a4a3a", paddingTop: 16 }}>© 2026 Janta Higher Secondary School, Mahuari Patherdewa. All Rights Reserved. || Designed & Developed by Vishnoo Singh</div>
       </footer>
@@ -305,7 +305,7 @@ export default function SchoolWebsite() {
 function FacultySection({ isAdmin }) {
   // ✅ FIX 1: removed unused `setFacultyList` setter
   const [facultyList] = useState([
-    { name: "Ashutosh Mani", role: "Principal", subject: "School Administration", qualification: " M.Sc Biology, B.Ed", experience: "25+ Years", contact: "7348465181", color: "#d4a017", image: "mani2.jpeg" },
+    { name: "Ashutosh Mani", role: "Principal", subject: "School Administration", qualification: " M.Sc Biology, B.Ed", experience: "25+ Years", contact: "9792465181", color: "#d4a017", image: "mani2.jpeg" },
     { name: "Ramdas Parnal", role: "Assistant Teacher", subject: "English", experience: "22+ Years", contact: "8423051231", color: "#3a2d5e", image: "RD.jpeg" },
     { name: "Ajay Bahadur Singh", role: "Assistant Teacher", subject: "Drawing , Sports & Physical Education", experience: "18+ Years", contact: "9839855862", color: "#1a3a4a", image: "ajay.png" },
     { name: "Ranjeet Verma ", role: "Assistant Teacher", subject: "Mathematics", experience: "5+ Years", contact: "9598144797", color: "#1a4a3a", image: "ajit.jpeg" },
