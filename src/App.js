@@ -223,7 +223,7 @@ export default function SchoolWebsite() {
           </div>
           <div style={{ flex: 1 }}>
             <div className="playfair" style={{ color: "#f5e6b8", fontSize: 22, fontWeight: 900, lineHeight: 1.2 }}>Janta Higher Secondary School</div>
-            <div style={{ color: "#d4a017", fontSize: 13, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginTop: 2 }}>Mahuari Patherdewa • Government School</div>
+            <div style={{ color: "#d4a017", fontSize: 13, fontWeight: 700, letterSpacing: 2, textTransform: "uppercase", marginTop: 2 }}>Mahuari Patherdewa Deoria • Government Aided School</div>
             <div style={{ color: "#aed6c8", fontSize: 11, letterSpacing: 1 }}>Classes VI – X • Est. Under State Education Board</div>
           </div>
           <nav className="nav-desktop" style={{ display: "flex", alignItems: "center", gap: 2 }}>
@@ -289,14 +289,14 @@ export default function SchoolWebsite() {
       )}
 
       <footer style={{ background: "#0f2e24", color: "#aed6c8", padding: "32px 24px", marginTop: 48, textAlign: "center" }}>
-        <div className="playfair" style={{ color: "#d4a017", fontSize: 20, fontWeight: 700, marginBottom: 8 }}>Janta Higher Secondary School Mahuari, Patherdewa</div>
-        <div style={{ fontSize: 13, marginBottom: 4 }}>Government School • Classes VI to X • Affiliated to State Education Board</div>
+        <div className="playfair" style={{ color: "#d4a017", fontSize: 20, fontWeight: 700, marginBottom: 8 }}>Janta Higher Secondary School Mahuari, Patherdew Deoria 274404  </div>
+        <div style={{ fontSize: 13, marginBottom: 4 }}>Government Aided School • Classes VI to X • Affiliated to State Education Board</div>
         <div style={{ fontSize: 12, color: "#6a9a8a", marginTop: 16, borderTop: "1px solid #1a4a3a", paddingTop: 16, lineHeight: 1.8 }}>
           <div><strong>Principal:</strong> Ashutosh Mani <strong> || Contact:</strong>{" "}<a href="tel:9792465181" style={{ color: "#d4a017", textDecoration: "none" }}>9792465181</a></div>
           <div><strong>Facebook:</strong>{" "}<a href="https://www.facebook.com/ashutosh.mani.39" target="_blank" rel="noreferrer" style={{ color: "#d4a017", textDecoration: "none" }}>🌐</a></div>
           <div><strong>School Location:</strong>{" "}<a href="https://www.google.com/maps/place/Janta+Uchchatar+madhyamik+vidyalaya/@26.565006,83.9311746,18.24z/data=!4m6!3m5!1s0x3993c7a2dd5a6c95:0x9651955cb1da35c2!8m2!3d26.5655312!4d83.931302!16s%2Fg%2F11n0n3m92w?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noreferrer" style={{ color: "#d4a017", textDecoration: "none" }}>Open in Google Maps📍</a></div>
         </div>
-        <div style={{ fontSize: 12, color: "#6a9a8a", marginTop: 16, borderTop: "1px solid #1a4a3a", paddingTop: 16 }}>© 2026 Janta Higher Secondary School, Mahuari Patherdewa. All Rights Reserved. || Designed & Developed by Vishnoo Singh</div>
+        <div style={{ fontSize: 12, color: "#6a9a8a", marginTop: 16, borderTop: "1px solid #1a4a3a", paddingTop: 16 }}>© 2026 Janta Higher Secondary School, Mahuari Patherdewa Deoria 274404. All Rights Reserved. || Designed & Developed by Vishnoo Singh</div>
       </footer>
     </div>
   );
@@ -305,13 +305,13 @@ export default function SchoolWebsite() {
 function FacultySection({ isAdmin }) {
   // ✅ FIX 1: removed unused `setFacultyList` setter
   const [facultyList] = useState([
-    { name: "Ashutosh Mani", role: "Principal", subject: "School Administration", qualification: " M.Sc Biology, B.Ed", experience: "25+ Years", contact: "9792465181", color: "#d4a017", image: "mani2.jpeg" },
-    { name: "Ramdas Parnal", role: "Assistant Teacher", subject: "English", experience: "22+ Years", contact: "8423051231", color: "#3a2d5e", image: "RD.jpeg" },
-    { name: "Ajay Bahadur Singh", role: "Assistant Teacher", subject: "Drawing , Sports & Physical Education", experience: "18+ Years", contact: "9839855862", color: "#1a3a4a", image: "ajay.png" },
-    { name: "Ranjeet Verma ", role: "Assistant Teacher", subject: "Mathematics", experience: "5+ Years", contact: "9598144797", color: "#1a4a3a", image: "ajit.jpeg" },
-    { name: "Jagdeesh Prasad", role: "Assistant Teacher", subject: "Hindi & Sanskrit", experience: "20+ Years+", contact: "9506199438", color: "#2d3a5e", image: "jp.jpeg" },
-    { name: "Gajendra Kumar Yadav", role: "Assistant Teacher", subject: "Sanskrit", experience: "20+ Years", contact: "9919702682", color: "#2d3a5e", image: "gaj.jpeg" },
-    { name: "Anju Singh", role: "Assistant Teacher", subject: "Home Science", experience: "6+ Years", contact: "9076922307", color: "#4a1a1a", image: "maam.jpeg" },
+    { name: "Ashutosh Mani", role: "Principal", subject: "School Administration", qualification: " M.Sc Biology, B.Ed", experience: "22+ Years", contact: "9792465181", color: "#d4a017", image: "mani2.jpeg" },
+    { name: "Ramdas ", role: "Assistant Teacher", subject: "English", experience: "16+ Years", contact: "8423051231", color: "#3a2d5e", image: "RD.jpeg" },
+    { name: "Ajay Bahadur Singh", role: "Assistant Teacher", subject: "Drawing , Sports & Physical Education", experience: "15+ Years", contact: "9839855862", color: "#1a3a4a", image: "ajay.png" },
+    { name: "Ranjeet Verma ", role: "Assistant Teacher", subject: "Mathematics", experience: "3+ Years", contact: "9598144797", color: "#1a4a3a", image: "ajit.jpeg" },
+    { name: "Jagdish Prasad", role: "Assistant Teacher", subject: "Hindi & Sanskrit", experience: "15+ Years+", contact: "9506199438", color: "#2d3a5e", image: "jp.jpeg" },
+    { name: "Gajendra Kumar Yadav", role: "Assistant Teacher", subject: "Sanskrit", experience: "5+ Years", contact: "9919702682", color: "#2d3a5e", image: "gaj.jpeg" },
+    { name: "Anju Singh", role: "Assistant Teacher", subject: "Home Science", experience: "5+ Years", contact: "9076922307", color: "#4a1a1a", image: "maam.jpeg" },
     { name: "Shailendra Pratap Singh", role: "Clerk/ Office Assistant", contact: "", color: "#06f345", image: "Shialendra.jpeg" },
     { name: "Udaybhan Prasad", role: "Clerk/ Office Assistant", contact: "", color: "#19dc33", image: "peon.jpeg" },
   ]);
@@ -394,9 +394,9 @@ function HomeSection({ notifications, gallery, navTo }) {
       <div style={{ background: "url('https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=1400&q=80') center/cover", minHeight: 500, position: "relative", display: "flex", alignItems: "center" }}>
         <div className="hero-overlay" style={{ position: "absolute", inset: 0 }} />
         <div style={{ position: "relative", zIndex: 1, maxWidth: 1200, margin: "0 auto", padding: "60px 24px" }}>
-          <div style={{ color: "#d4a017", fontSize: 13, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase", marginBottom: 12 }}>Government Higher Secondary School</div>
+          <div style={{ color: "#d4a017", fontSize: 13, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase", marginBottom: 12 }}>Government Aided Higher Secondary School</div>
           <h1 className="hero-title playfair" style={{ color: "#fff", fontSize: 48, fontWeight: 900, lineHeight: 1.1, marginBottom: 16, maxWidth: 640 }}>
-            Janta Higher Secondary School<br /><span style={{ color: "#d4a017" }}>Mahuari Patherdewa</span>
+            Janta Higher Secondary School<br /><span style={{ color: "#d4a017" }}>Mahuari Patherdewa Deoria</span>
           </h1>
           <p style={{ color: "#cde8de", fontSize: 18, maxWidth: 520, lineHeight: 1.7, marginBottom: 32 }}>Nurturing young minds from Class VI to Class X with quality education, values, and character building.</p>
           <div style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
@@ -407,7 +407,7 @@ function HomeSection({ notifications, gallery, navTo }) {
       </div>
       <div style={{ background: "#1a4a3a", padding: "24px" }}>
         <div className="stats-bar" style={{ maxWidth: 1200, margin: "0 auto", display: "flex", justifyContent: "space-around", gap: 32, textAlign: "center" }}>
-          {[["5 Classes", "Class VI to X"], ["Government", "Recognized School"], ["Mahuari Patherdewa", "Uttar Pradesh"], ["Quality", "Education"]].map(([a, b]) => (
+          {[["5 Classes", "Class VI to X"], ["Government Aided", "Recognized School"], ["Mahuari Patherdewa Deoria", "Uttar Pradesh"], ["Quality", "Education"]].map(([a, b]) => (
             <div key={a}>
               <div className="playfair" style={{ color: "#d4a017", fontSize: 22, fontWeight: 900 }}>{a}</div>
               <div style={{ color: "#aed6c8", fontSize: 12, letterSpacing: 1, textTransform: "uppercase", marginTop: 2 }}>{b}</div>
@@ -492,13 +492,13 @@ function AboutSection() {
       <p style={{ lineHeight: 1.8, color: "#444", fontSize: 14 }}>
         "We are committed to creating a learning environment where every student is encouraged to reach their highest potential. Our dedicated faculty and strong community support make Janta Higher Secondary School a place of excellence."
       </p>
-      <div style={{ marginTop: 12, fontWeight: 700, color: "#1a4a3a", fontSize: 13 }}>— Principal, Janta HSS Mahuari, Patherdewa</div>
+      <div style={{ marginTop: 12, fontWeight: 700, color: "#1a4a3a", fontSize: 13 }}>— Principal, Janta HSS Mahuari, Patherdewa , Deoria 274404</div>
     </div>
   </div>
 </div>
         </div>
         <div>
-          {[["🏛️", "Government School", "Recognized and affiliated with Uttar Pradesh state education authorities."], ["📚", "Classes VI to X", "Comprehensive secondary education following the UP Board curriculum."], ["👩‍🏫", "Qualified Faculty", "Experienced and dedicated teachers committed to student success."], ["🌿", "Holistic Development", "Academics, sports, arts, and cultural activities for overall growth."], ["📍", "Location", "Conveniently located in Mahuari ,Patherdewa Deoria 274404 , serving students from the local community."], ["🏆", "Achievements", "Consistent academic results and active participation in district science events."]].map(([icon, title, desc]) => (
+          {[["🏛️", "Government Aided School", "Recognized and affiliated with Uttar Pradesh state education authorities."], ["📚", "Classes VI to X", "Comprehensive secondary education following the UP Board curriculum."], ["👩‍🏫", "Qualified Faculty", "Experienced and dedicated teachers committed to student success."], ["🌿", "Holistic Development", "Academics, sports, arts, and cultural activities for overall growth."], ["📍", "Location", "Conveniently located in Mahuari ,Patherdewa Deoria 274404 , serving students from the local community."], ["🏆", "Achievements", "Consistent academic results and active participation in district science events."]].map(([icon, title, desc]) => (
             <div key={title} style={{ display: "flex", gap: 16, marginBottom: 20, padding: 20, background: "#fff", borderRadius: 2, boxShadow: "0 1px 8px rgba(0,0,0,0.06)" }}>
               <span style={{ fontSize: 28, flexShrink: 0 }}>{icon}</span>
               <div><div style={{ fontWeight: 700, color: "#1a4a3a", marginBottom: 4 }}>{title}</div><div style={{ fontSize: 13, color: "#666", lineHeight: 1.6 }}>{desc}</div></div>
@@ -649,7 +649,7 @@ function ContactSection() {
       <span className="section-title">Contact Us</span>
       <div className="grid-2" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40 }}>
         <div>
-          {[["📍", "Address", "Janta Higher Secondary School\nMahuari, Uttar Pradesh, India"], ["🏛️", "School Type", "Government Higher Secondary School\nAffiliated to UP Board"], ["📚", "Classes Offered", "Class VI, VII, VIII, IX, X\n(Middle & Secondary Education)"], ["🕐", "School Timings", "Monday to Saturday\n10:00 AM – 3:00 PM"]].map(([icon, title, info]) => (
+          {[["📍", "Address", "Janta Higher Secondary School\nMahuari, Patherdewa , Deoria 274404  Uttar Pradesh, India"], ["🏛️", "School Type", "Government Aided Higher Secondary School\nAffiliated to UP Board"], ["📚", "Classes Offered", "Class VI, VII, VIII, IX, X\n(Middle & Secondary Education)"], ["🕐", "School Timings", "Monday to Saturday\n07:30 AM – 01:30 PM"]].map(([icon, title, info]) => (
             <div key={title} style={{ display: "flex", gap: 16, padding: 20, background: "#fff", borderRadius: 2, boxShadow: "0 1px 8px rgba(0,0,0,0.06)", marginBottom: 16 }}>
               <span style={{ fontSize: 28 }}>{icon}</span>
               <div><div style={{ fontWeight: 700, color: "#1a4a3a", marginBottom: 4 }}>{title}</div><div style={{ fontSize: 13, color: "#666", lineHeight: 1.7, whiteSpace: "pre-line" }}>{info}</div></div>
