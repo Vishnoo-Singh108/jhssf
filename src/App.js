@@ -308,7 +308,7 @@ function FacultySection({ isAdmin }) {
     { name: "Ashutosh Mani", role: "Principal", subject: "School Administration", qualification: " M.Sc Biology, B.Ed", experience: "22+ Years", contact: "9792465181", color: "#d4a017", image: "mani2.jpeg" },
     { name: "Ramdas ", role: "Assistant Teacher", subject: "English", experience: "16+ Years", contact: "8423051231", color: "#3a2d5e", image: "RD.jpeg" },
     { name: "Ajay Bahadur Singh", role: "Assistant Teacher", subject: "Drawing , Sports & Physical Education", experience: "15+ Years", contact: "9839855862", color: "#1a3a4a", image: "ajay.png" },
-    { name: "Ranjeet Verma ", role: "Assistant Teacher", subject: "Mathematics", experience: "3+ Years", contact: "9598144797", color: "#1a4a3a", image: "ajit.jpeg" },
+    { name: "Ranjeet Verma ", role: "Assistant Teacher", subject: "Mathematics", experience: "3+ Years", contact: "9598144797", color: "#1a4a3a", image: "Ajit.jpeg" },
     { name: "Jagdish Prasad", role: "Assistant Teacher", subject: "Hindi & Sanskrit", experience: "15+ Years+", contact: "9506199438", color: "#2d3a5e", image: "jp.jpeg" },
     { name: "Gajendra Kumar Yadav", role: "Assistant Teacher", subject: "Sanskrit", experience: "5+ Years", contact: "9919702682", color: "#2d3a5e", image: "gaj.jpeg" },
     { name: "Anju Singh", role: "Assistant Teacher", subject: "Home Science", experience: "5+ Years", contact: "9076922307", color: "#4a1a1a", image: "maam.jpeg" },
